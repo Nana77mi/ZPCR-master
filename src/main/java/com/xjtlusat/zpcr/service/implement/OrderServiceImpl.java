@@ -20,7 +20,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import javax.servlet.http.HttpSession;
-import java.sql.Date;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -71,14 +70,14 @@ public class OrderServiceImpl implements OrderService {
 //        private Timestamp realAppointStartTime;
 //        private Timestamp realAppointReturnTime;
 
-        order.setRealAppointStartTime(new Date(0));
-        order.setRealAppointReturnTime(new Date(0));
+        order.setRealAppointStartTime(null);
+        order.setRealAppointReturnTime(null);
 
 //        private Timestamp orderStartTime;
 //        private Timestamp orderFinishTime;
 
         order.setOrderStartTime(OrderUtil.getCurrentTimestamp());
-        order.setOrderFinishTime(new Date(0));
+        order.setOrderFinishTime(null);
 
 //        private String paymentMethod;
 //        private String paymentId;
